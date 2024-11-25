@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import Footer from "../components/Footer";
+import Footer from "../components/Footer/Footer";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/Navbar/Navbar";
+import Sidebar from "../components/Sidebar/Sidebar";
 
 const Register = () => {
   //输入的用户信息
@@ -34,6 +35,7 @@ const Register = () => {
   return (
     <div>
       <Navbar />
+      <Sidebar />
       <div className="login_register">
         <h1 style={{color:"white"}}>Register</h1>
         <form>

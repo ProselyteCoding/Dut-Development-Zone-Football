@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import "../App.css";
-import { AuthContext } from "../context/authContext";
+import "../../App.css";
+import { AuthContext } from "../../context/authContext";
 import { Link } from "react-router-dom";
 
 //导航栏组件

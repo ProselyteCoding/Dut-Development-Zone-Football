@@ -1,12 +1,13 @@
 import React, { useContext } from "react";
-import Footer from "../components/Footer";
+import Footer from "../components/Footer/Footer";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { AuthContext } from "../context/authContext";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/Navbar/Navbar";
 import "../App.css";
+import Sidebar from "../components/Sidebar/Sidebar";
 
 const Login = () => {
   //输入的用户信息
@@ -41,6 +42,7 @@ const Login = () => {
   return (
     <div>
       <Navbar />
+      <Sidebar />
       <div className="login_register">
         <h1 style={{color:"white"}}>Login</h1>
         <form>

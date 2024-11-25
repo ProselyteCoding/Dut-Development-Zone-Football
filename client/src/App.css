@@ -125,6 +125,9 @@
   height: 73vh;
 }
 body{
-  background-image: linear-gradient(135deg,#2c3e50,#27ae60,#3c6ee3,#31222f);
+  background-image: linear-gradient(180deg,#38d4fa,#c57a29,#860274);
   background-size:100%;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  background-position:center;
 }

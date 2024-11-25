@@ -2,10 +2,11 @@ import { useContext, useEffect, useState } from "react";
 import "../App.css";
 import TodoList from "../components/List";
 import Add from "../components/Add";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import Footer from "../components/Footer/Footer";
+import Navbar from "../components/Navbar/Navbar";
 import axios from "axios";
 import { AuthContext } from "../context/authContext";
+import Sidebar from "../components/Sidebar/Sidebar";
 
 //主页面，也是未登录的代办操作页面
 function Home() {
@@ -34,6 +35,7 @@ function Home() {
     <div>
       <div className="App">
         <Navbar/>
+        <Sidebar />
         <div className="workspace">
           <div className="add">
             <Add listData={listData} setListData={setListData}></Add>

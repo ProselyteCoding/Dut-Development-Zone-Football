@@ -1,0 +1,21 @@
+.sidebar-list {
+    list-style: none;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    top: 15vh;
+    padding: 0;
+    background-color: aqua;
+    height: 100vh;
+    
+    .sidebar-item{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 10px;
+        margin-top: 20px;
+        font-size: 20px;
+        background-color: white;
+    }
+}
