@@ -1,7 +1,5 @@
 import { useContext, useEffect, useState } from "react";
 import "../App.css";
-import TodoList from "../components/List";
-import Add from "../components/Add";
 import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
 import axios from "axios";
@@ -37,15 +35,10 @@ function Home() {
         <Navbar/>
         <Sidebar />
         <div className="workspace">
-          <div className="add">
-            <Add listData={listData} setListData={setListData}></Add>
-          </div>
-          <div className="list">
-            <TodoList listData={listData} setListData={setListData} />
-          </div>
         </div>
       </div>
       <Footer />
+      <div>123</div>
     </div>
   );
 }

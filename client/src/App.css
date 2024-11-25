@@ -1,10 +1,3 @@
-.head {
-  font-size: 50px;
-  font-family: "Times New Roman", Times, serif;
-  text-align: center;
-  position: relative;
-  color: white;
-}
 .date {
   position: relative;
   top: 70px;
@@ -66,7 +59,7 @@
       margin-top: 10px;
       padding: 10px;
       cursor: pointer;
-      background-color: rgb(53, 108, 42);
+      background-color: rgb(224, 138, 33);
       color: white;
       border: none;
       font-size: 16px;
@@ -74,60 +67,22 @@
     }
   }
 }
-
-.Navbar {
-  height: 17vh;
-}
-
 .link {
   text-decoration: none;
   color: white;
   display: flex;
   align-items: center;
 }
-
-.current_user {
-  background-color: #1677ff;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-}
-.none_user {
-  background-color: rgb(53, 108, 42);
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-}
-.container {
-  display: flex;
-}
-.login_logout {
-  display: flex;
-  align-items: center;
-  margin-left: 17px;
-}
-.footer {
-  height: 10vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-}
 .workspace {
   height: 73vh;
 }
 body{
-  background-image: linear-gradient(180deg,#38d4fa,#c57a29,#860274);
+  /* background-image: linear-gradient(180deg,#38d4fa,#c57a29,#860274); */
   background-size:100%;
   background-repeat:no-repeat;
   background-attachment:fixed;
   background-position:center;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(4, 6, 36);
 }

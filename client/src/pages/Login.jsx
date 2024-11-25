@@ -58,13 +58,76 @@ const Login = () => {
             name="password"
             onChange={handleChange}
           />
-          <button onClick={handelSubmit}>Login</button>
+          <button onClick={handelSubmit}>登录</button>
           {error && <p style={{ color: "red" }}>{error}</p>}
           <span>
-            <Link to="/register">Haven't had any account.</Link>
+            <Link to="/register">立即注册！</Link>
           </span>
         </form>
       </div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
       <Footer />
     </div>
   );

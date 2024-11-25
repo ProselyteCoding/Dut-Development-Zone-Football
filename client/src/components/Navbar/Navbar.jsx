@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import "../../App.css";
+import "./Navbar.css";
 import { AuthContext } from "../../context/authContext";
 import { Link } from "react-router-dom";
 
@@ -10,7 +11,6 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <div className="head">ToDoList</div>
       <div className="container">
         {/*已登录时显示当前用户名，否则为None*/}
         {currentUser ? (
@@ -22,18 +22,18 @@ const Navbar = () => {
         {currentUser ? (
           <span className="login_logout" onClick={logout}>
             <Link className="link" to="/">
-              Logout
+              退出
             </Link>
           </span>
         ) : (
           <span className="login_logout">
             <Link className="link" to="/login">
-              Login
+              登录
             </Link>
           </span>
         )}
       </div>
-      <hr></hr>
+      <div className="divider"></div>
     </div>
   );
 };
