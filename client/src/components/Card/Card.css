@@ -1,0 +1,26 @@
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 300px;
+  height: 400px;
+  margin-left: 300px;
+  overflow: hidden;
+  border: 2px solid white;
+  background-image: url("../../assets/images/fifa23.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+
+  .face {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+}

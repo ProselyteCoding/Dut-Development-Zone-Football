@@ -8,6 +8,7 @@ import { AuthContext } from "../context/authContext";
 import Navbar from "../components/Navbar/Navbar";
 import "../App.css";
 import Sidebar from "../components/Sidebar/Sidebar";
+import Card from "../components/Card/Card";
 
 const Login = () => {
   //输入的用户信息
@@ -65,6 +66,9 @@ const Login = () => {
           </span>
         </form>
       </div>
+
+      <Card />
+
       <div>123</div>
       <div>123</div>
       <div>123</div>

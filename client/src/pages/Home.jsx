@@ -35,10 +35,10 @@ function Home() {
         <Navbar/>
         <Sidebar />
         <div className="workspace">
+
         </div>
+        <Footer />
       </div>
-      <Footer />
-      <div>123</div>
     </div>
   );
 }
