@@ -60,7 +60,32 @@ const Card = () => {
           onMouseDown={handleMouseDown}
           style={{ position: 'absolute' }} // 确保图片可以自由移动
         />
-        <div className="content">123</div>
+
+        <div className="data">
+          <div className="overall">91</div>
+          <div className="position">ST</div>
+          <div className="name">Haaland</div>
+          <ul className="data-list">
+            <li className="data-item" id="pac">88</li>
+            <li className="data-item" id="sho">92</li>
+            <li className="data-item" id="pas">70</li>
+            <li className="data-item" id="dri">81</li>
+            <li className="data-item" id="def">45</li>
+            <li className="data-item" id="phy">88</li>
+          </ul>
+          <ul className="logo-list">
+            <li className="logo-item" id="nationality">x</li>
+            <li className="logo-item" id="league">y</li>
+            <li className="logo-item" id="club">z</li>
+          </ul>
+        </div>
+
+        <div className="controls">
+          <div>
+
+          </div>
+        </div>
+
       </div>
     </div>
   );
