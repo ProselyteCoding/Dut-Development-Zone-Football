@@ -1,91 +1,125 @@
-.card {
+.card-container {
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 300px;
-  height: 400px;
-  margin-left: 300px;
-  overflow: hidden;
-  border: 2px solid white;
-  background-image: url("../../assets/images/fifa23.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
-  z-index: -1;
+  flex-direction: row;
 
-  .face {
+  .card {
     display: flex;
     align-items: center;
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    cursor: pointer;
-    -webkit-user-select: none;
-    user-select: none;
+    justify-content: center;
+    flex-direction: column;
+    width: 300px;
+    height: 400px;
+    margin-left: 300px;
+    overflow: hidden;
+    border: 2px solid white;
+    background-image: url("../../assets/images/fifa23.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: -1;
+
+    .face {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      width: 175px;
+      height: 175px;
+      top: 90px;
+      cursor: pointer;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+    .data {
+      .overall {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 85px;
+        left: 55px;
+        font-size: 35px;
+        font-weight: 600;
+      }
+      .position {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 128px;
+        left: 62px;
+        font-size: 20px;
+        font-weight: 500;
+      }
+      .name {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 263px;
+        left: 100px;
+        right: 100px;
+        font-size: 25px;
+        font-weight: 600;
+      }
+      .data-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        position: absolute;
+        top: 281px;
+        left: 17px;
+        right: 45px;
+        list-style: none;
+
+        .data-item {
+          margin-right: 10px;
+          .type {
+            font-size: 15px;
+            font-weight: 300;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .value {
+            font-size: 15px;
+            font-weight: 600;
+            margin-top: 0;
+            padding-top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+      .logo-list {
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 314px;
+        left: 30px;
+        right: 56px;
+        font-size: 18px;
+        list-style: none;
+        .logo-item {
+          margin-right: 10px;
+        }
+      }
+    }
   }
-  .data {
-    .overall {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: absolute;
-      top: 85px;
-      left: 55px;
-      font-size: 35px;
-      font-weight: 600;
-    }
-    .position {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: absolute;
-      top: 128px;
-      left: 62px;
-      font-size: 20px;
-      font-weight: 500;
-    }
-    .name {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: absolute;
-      top: 263px;
-      left: 100px;
-      right: 100px;
-      font-size: 25px;
-      font-weight: 600;
-    }
-    .data-list {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: row;
-      position: absolute;
-      top: 287px;
-      left: 20px;
-      right: 38px;
-      font-size: 20px;
-      font-weight: 500;
-      list-style: none;
-      .data-item {
-        margin-right: 10px;
-      }
-    }
-    .logo-list {
-      flex-direction: row;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: absolute;
-      top: 314px;
-      left: 30px;
-      right: 56px;
-      font-size: 18px;
-      list-style: none;
-      .logo-item {
-        margin-right: 10px;
-      }
-    }
+
+  .controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: white 2px solid;
+    width: 800px;
+    height: 400px;
+    margin-left: 50px;
+    z-index: -1;
   }
 }

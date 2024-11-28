@@ -1,6 +1,8 @@
 import React from "react";
 import { useState, useRef } from "react";
 import "./Card.css";
+import faceImage from '../../assets/images/face.png';
+
 
 const Card = () => {
   const imgRef = useRef(null);
@@ -55,10 +57,9 @@ const Card = () => {
         <img
           className="face"
           ref={imgRef}
-          src="https://via.placeholder.com/100" // 替换为你的图片URL
+          src={faceImage} // 替换为你的图片URL
           alt="Draggable"
           onMouseDown={handleMouseDown}
-          style={{ position: 'absolute' }} // 确保图片可以自由移动
         />
 
         <div className="data">
@@ -66,12 +67,30 @@ const Card = () => {
           <div className="position">ST</div>
           <div className="name">Haaland</div>
           <ul className="data-list">
-            <li className="data-item" id="pac">88</li>
-            <li className="data-item" id="sho">92</li>
-            <li className="data-item" id="pas">70</li>
-            <li className="data-item" id="dri">81</li>
-            <li className="data-item" id="def">45</li>
-            <li className="data-item" id="phy">88</li>
+            <li className="data-item" id="pac">
+              <div className="type">PAC</div>
+              <div className="value">88</div>
+            </li>
+            <li className="data-item" id="sho">
+              <div className="type">SHO</div>
+              <div className="value">92</div>
+            </li>
+            <li className="data-item" id="pas">
+              <div className="type">PAS</div>
+              <div className="value">70</div>
+            </li>
+            <li className="data-item" id="dri">
+              <div className="type">DRI</div>
+              <div className="value">81</div>
+            </li>
+            <li className="data-item" id="def">
+              <div className="type">DEF</div>
+              <div className="value">45</div>
+            </li>
+            <li className="data-item" id="phy">
+              <div className="type">PHY</div>
+              <div className="value">88</div>
+            </li>
           </ul>
           <ul className="logo-list">
             <li className="logo-item" id="nationality">x</li>
@@ -80,13 +99,15 @@ const Card = () => {
           </ul>
         </div>
 
-        <div className="controls">
-          <div>
-
-          </div>
-        </div>
+        
 
       </div>
+      <div className="controls">
+        <div>
+
+        </div>
+      </div>
+
     </div>
   );
 };
