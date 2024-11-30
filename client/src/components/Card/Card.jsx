@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import "./Card.css";
 import faceImage from "../../assets/images/face.png";
 
@@ -7,9 +7,13 @@ const Card = () => {
   const imgRef = useRef(null);
   const containerRef = useRef(null);
   const [isDragging, setIsDragging] = useState(false);
+  const [isResizing, setIsResizing] = useState(false);
+  const [imgSize, setImgSize] = useState({ width: 175, height: 175 });
   const [offset, setOffset] = useState({ x: 0, y: 0 });
+  const [resizeHandle, setResizeHandle] = useState(null); // 存储正在使用的手柄
 
-  const handleMouseDown = (e) => {
+  const handlePictureMouseDown = (e) => {
+    e.preventDefault();
     setIsDragging(true);
     const imgRect = imgRef.current.getBoundingClientRect();
     setOffset({
@@ -18,11 +22,12 @@ const Card = () => {
     });
   };
 
-  const handleMouseUp = () => {
+  const handlePictureMouseUp = () => {
     setIsDragging(false);
+    setIsResizing(false);
   };
 
-  const handleMouseMove = (e) => {
+  const handlePictureMouseMove = (e) => {
     if (isDragging) {
       const containerRect = containerRef.current.getBoundingClientRect();
       const imgRect = imgRef.current.getBoundingClientRect();
@@ -41,24 +46,118 @@ const Card = () => {
       // 更新图片位置
       imgRef.current.style.left = `${x - containerRect.left}px`;
       imgRef.current.style.top = `${y - containerRect.top}px`;
+    } else if (isResizing && resizeHandle) {
+      handleResizeMouseMove(e);
     }
+
+    updateResizeHandles();
   };
+
+  const handleResizeMouseDown = (e, handle) => {
+    e.preventDefault();
+    setIsResizing(true);
+    setResizeHandle(handle);
+  };
+
+  const handleResizeMouseMove = (e) => {  
+    const imgRect = imgRef.current.getBoundingClientRect();  
+    let newWidth = imgSize.width;  
+    let newHeight = imgSize.height;  
+
+    if (resizeHandle === "bottom-right") {  
+        newWidth = e.clientX - imgRect.left;  
+        newHeight = e.clientY - imgRect.top;  
+    } else if (resizeHandle === "bottom-left") {  
+        newWidth = imgRect.right - e.clientX;  
+        newHeight = e.clientY - imgRect.top;  
+    } else if (resizeHandle === "top-right") {  
+        newWidth = e.clientX - imgRect.left;  
+        newHeight = imgRect.bottom - e.clientY;  
+    } else if (resizeHandle === "top-left") {  
+        newWidth = imgRect.right - e.clientX;  
+        newHeight = imgRect.bottom - e.clientY;  
+    }  
+
+    // 限制最小尺寸  
+    if (newWidth > 50 && newHeight > 50) {  
+        setImgSize({ width: newWidth, height: newHeight });  
+        updateResizeHandles(); // 调整后更新手柄位置  
+    }  
+};  
+
+// 在组件挂载时添加文档的 mouseup 事件监听  
+useEffect(() => {  
+    const handleMouseUp = () => {  
+        setIsDragging(false);  
+        setIsResizing(false);  
+    };  
+
+    document.addEventListener("mouseup", handleMouseUp);  
+    return () => {  
+        document.removeEventListener("mouseup", handleMouseUp);  
+    };  
+}, []);
+
+  const updateResizeHandles = () => {
+    const handles = document.querySelectorAll(".resizer");
+    handles.forEach((handle) => {
+      const imgRect = imgRef.current.getBoundingClientRect();
+      const handleRect = handle.getBoundingClientRect();
+  
+      const handleOffset = 5; // 手柄偏移量
+  
+      const position = handle.classList.contains("top-left")
+        ? { left: imgRect.left - handleRect.width + handleOffset + "px", top: imgRect.top - handleRect.height + handleOffset + "px" }
+        : handle.classList.contains("top-right")
+        ? { left: imgRect.right - handleOffset + "px", top: imgRect.top - handleRect.height + handleOffset + "px" }
+        : handle.classList.contains("bottom-left")
+        ? { left: imgRect.left - handleRect.width + handleOffset + "px", top: imgRect.bottom - handleOffset + "px" }
+        : // bottom-right
+          { left: imgRect.right - handleOffset + "px", top: imgRect.bottom - handleOffset + "px" };
+  
+      handle.style.left = position.left;
+      handle.style.top = position.top;
+    });
+  };  
 
   return (
     <div className="card-container">
       <div
         className="card"
         ref={containerRef}
-        onMouseMove={handleMouseMove}
-        onMouseUp={handleMouseUp}
-        onMouseLeave={handleMouseUp} // 在鼠标离开容器时也停止拖动
+        onMouseMove={handlePictureMouseMove}
+        onMouseUp={handlePictureMouseUp}
+        onMouseLeave={handlePictureMouseUp} // 在鼠标离开容器时也停止拖动
       >
         <img
           className="face"
           ref={imgRef}
           src={faceImage} // 替换为你的图片URL
           alt="Draggable"
-          onMouseDown={handleMouseDown}
+          onMouseDown={handlePictureMouseDown}
+          style={{
+            cursor: isDragging ? "move" : "pointer",
+            position: "absolute",
+            width: imgSize.width, // 设置动态宽度
+            height: imgSize.height, // 设置动态高度
+          }}
+        />
+
+        <div
+          className="resizer top-left"
+          onMouseDown={(e) => handleResizeMouseDown(e, "top-left")}
+        />
+        <div
+          className="resizer top-right"
+          onMouseDown={(e) => handleResizeMouseDown(e, "top-right")}
+        />
+        <div
+          className="resizer bottom-left"
+          onMouseDown={(e) => handleResizeMouseDown(e, "bottom-left")}
+        />
+        <div
+          className="resizer bottom-right"
+          onMouseDown={(e) => handleResizeMouseDown(e, "bottom-right")}
         />
 
         <div className="data">

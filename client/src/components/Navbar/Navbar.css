@@ -1,6 +1,8 @@
 .navbar {
   position: fixed;
   top: 0;
+  z-index: 1000;
+
   .container {
     background-color: #1a214a;
     margin: 0;
@@ -9,8 +11,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    z-index: 2;
-
+    
     .current_user {
       background-color: #1677ff;
       width: 45px;

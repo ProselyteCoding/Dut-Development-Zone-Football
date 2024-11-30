@@ -11,24 +11,48 @@
     width: 300px;
     height: 400px;
     margin-left: 300px;
-    overflow: hidden;
     background-image: url("../../assets/images/fifa23.png");
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
-    z-index: -1;
 
     .face {
       display: flex;
       align-items: center;
       position: absolute;
-      width: 175px;
-      height: 175px;
       top: 90px;
-      cursor: pointer;
       -webkit-user-select: none;
       user-select: none;
     }
+
+    .resizer {
+      position: absolute;
+      width: 10px; /* 手柄宽度 */
+      height: 10px; /* 手柄高度 */
+      background-color: rgba(255, 255, 0, 0.8); /* 手柄颜色 */
+      cursor: nwse-resize; /* 拉伸时的指针样式 */
+    }
+    
+    .top-left {
+      top: -5px;
+      left: -5px;
+    }
+    
+    .top-right {
+      top: -5px;
+      right: -5px;
+    }
+    
+    .bottom-left {
+      bottom: -5px;
+      left: -5px;
+    }
+    
+    .bottom-right {
+      bottom: -5px;
+      right: -5px;
+    }
+
     .data {
       .overall {
         display: flex;
