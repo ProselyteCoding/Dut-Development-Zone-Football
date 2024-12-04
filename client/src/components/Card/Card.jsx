@@ -8,10 +8,11 @@ const Card = () => {
   const containerRef = useRef(null);
   const [isDragging, setIsDragging] = useState(false);
   const [isResizing, setIsResizing] = useState(false);
-  const [imgSize, setImgSize] = useState({ width: 175, height: 175 });
-  const [offset, setOffset] = useState({ x: 0, y: 0 });
+  const [imgSize, setImgSize] = useState({ width: 175, height: 175 }); //图片大小
+  const [offset, setOffset] = useState({ x: 0, y: 0 }); //偏移
   const [resizeHandle, setResizeHandle] = useState(null); // 存储正在使用的手柄
 
+  // 拖动图片
   const handlePictureMouseDown = (e) => {
     e.preventDefault();
     setIsDragging(true);
@@ -22,11 +23,13 @@ const Card = () => {
     });
   };
 
+  // 松开图片
   const handlePictureMouseUp = () => {
     setIsDragging(false);
     setIsResizing(false);
   };
 
+  //移动图片
   const handlePictureMouseMove = (e) => {
     if (isDragging) {
       const containerRect = containerRef.current.getBoundingClientRect();
@@ -48,77 +51,111 @@ const Card = () => {
       imgRef.current.style.top = `${y - containerRect.top}px`;
     } else if (isResizing && resizeHandle) {
       handleResizeMouseMove(e);
+      
     }
-
     updateResizeHandles();
   };
 
+  //选中调整图片
   const handleResizeMouseDown = (e, handle) => {
     e.preventDefault();
     setIsResizing(true);
     setResizeHandle(handle);
   };
 
-  const handleResizeMouseMove = (e) => {  
-    const imgRect = imgRef.current.getBoundingClientRect();  
-    let newWidth = imgSize.width;  
-    let newHeight = imgSize.height;  
+  // 移动调整图片大小
+  const handleResizeMouseMove = (e) => {
+    const imgRect = imgRef.current.getBoundingClientRect();
+    const containerRect = containerRef.current.getBoundingClientRect(); // 获取容器边界
+    let newWidth = imgSize.width;
+    let newHeight = imgSize.height;
+    let newLeft = imgRect.left; // 默认左位置
+    let newTop = imgRect.top;   // 默认顶部位置
 
-    if (resizeHandle === "bottom-right") {  
-        newWidth = e.clientX - imgRect.left;  
-        newHeight = e.clientY - imgRect.top;  
-    } else if (resizeHandle === "bottom-left") {  
-        newWidth = imgRect.right - e.clientX;  
-        newHeight = e.clientY - imgRect.top;  
-    } else if (resizeHandle === "top-right") {  
-        newWidth = e.clientX - imgRect.left;  
-        newHeight = imgRect.bottom - e.clientY;  
-    } else if (resizeHandle === "top-left") {  
-        newWidth = imgRect.right - e.clientX;  
-        newHeight = imgRect.bottom - e.clientY;  
-    }  
+    // 调整大小时的逻辑
+    if (resizeHandle === "bottom-right") {
+        newWidth = e.clientX - imgRect.left;
+        newHeight = e.clientY - imgRect.top;
+    } else if (resizeHandle === "bottom-left") {
+        newWidth = imgRect.right - e.clientX;
+        newHeight = e.clientY - imgRect.top;
+        newLeft = e.clientX; // 更新左边位置
+    } else if (resizeHandle === "top-right") {
+        newWidth = e.clientX - imgRect.left;
+        newHeight = imgRect.bottom - e.clientY;
+        newTop = e.clientY; // 更新上边位置
+        newLeft = imgRect.left; // 确保左边位置不变
+    } else if (resizeHandle === "top-left") {
+        newWidth = imgRect.right - e.clientX;
+        newHeight = imgRect.bottom - e.clientY;
+        newLeft = e.clientX; // 更新左边位置
+        newTop = e.clientY;  // 更新上边位置
+    }
 
-    // 限制最小尺寸  
-    if (newWidth > 50 && newHeight > 50) {  
-        setImgSize({ width: newWidth, height: newHeight });  
-        updateResizeHandles(); // 调整后更新手柄位置  
-    }  
-};  
+    // 限制新尺寸在容器边界内
+    if (newWidth > 50 && newHeight > 50) {
+        setImgSize({ width: newWidth, height: newHeight });
+        imgRef.current.style.width = `${newWidth}px`; // 设置新的宽度
+        imgRef.current.style.height = `${newHeight}px`; // 设置新的高度
+        
+        // 更新图片的位置，以对角顶点为基准
+        imgRef.current.style.left = `${newLeft - containerRect.left}px`;
+        imgRef.current.style.top = `${newTop - containerRect.top}px`;
+        
+        updateResizeHandles(); // 调整后更新手柄位置
+    }
+};
 
-// 在组件挂载时添加文档的 mouseup 事件监听  
-useEffect(() => {  
-    const handleMouseUp = () => {  
-        setIsDragging(false);  
-        setIsResizing(false);  
-    };  
 
-    document.addEventListener("mouseup", handleMouseUp);  
-    return () => {  
-        document.removeEventListener("mouseup", handleMouseUp);  
-    };  
-}, []);
 
-  const updateResizeHandles = () => {
-    const handles = document.querySelectorAll(".resizer");
-    handles.forEach((handle) => {
-      const imgRect = imgRef.current.getBoundingClientRect();
-      const handleRect = handle.getBoundingClientRect();
-  
-      const handleOffset = 5; // 手柄偏移量
-  
+  // 在组件挂载时添加文档的 mouseup 事件监听
+  useEffect(() => {
+    // 鼠标松开时停止拖动
+    const handleMouseUp = () => {
+      setIsDragging(false);
+      setIsResizing(false);
+    };
+
+    document.addEventListener("mouseup", handleMouseUp);
+    return () => {
+      document.removeEventListener("mouseup", handleMouseUp);
+    };
+  }, []);
+
+  // 更新手柄位置
+const updateResizeHandles = () => {
+  const handles = document.querySelectorAll(".resizer");
+  const imgRect = imgRef.current.getBoundingClientRect(); // 获取图片的边界
+  const containerRect = containerRef.current.getBoundingClientRect(); // 获取容器的边界
+  const handleOffset = 5; // 手柄偏移量
+
+  handles.forEach((handle) => {
       const position = handle.classList.contains("top-left")
-        ? { left: imgRect.left - handleRect.width + handleOffset + "px", top: imgRect.top - handleRect.height + handleOffset + "px" }
-        : handle.classList.contains("top-right")
-        ? { left: imgRect.right - handleOffset + "px", top: imgRect.top - handleRect.height + handleOffset + "px" }
-        : handle.classList.contains("bottom-left")
-        ? { left: imgRect.left - handleRect.width + handleOffset + "px", top: imgRect.bottom - handleOffset + "px" }
-        : // bottom-right
-          { left: imgRect.right - handleOffset + "px", top: imgRect.bottom - handleOffset + "px" };
-  
+          ? {
+              left: imgRect.left - containerRect.left - handle.offsetWidth + handleOffset + "px",
+              top: imgRect.top - containerRect.top - handle.offsetHeight + handleOffset + "px",
+          }
+          : handle.classList.contains("top-right")
+          ? {
+              left: imgRect.right - containerRect.left - handleOffset + "px",
+              top: imgRect.top - containerRect.top - handle.offsetHeight + handleOffset + "px",
+          }
+          : handle.classList.contains("bottom-left")
+          ? {
+              left: imgRect.left - containerRect.left - handle.offsetWidth + handleOffset + "px",
+              top: imgRect.bottom - containerRect.top - handleOffset + "px",
+          }
+          : // bottom-right
+          {
+              left: imgRect.right - containerRect.left - handleOffset + "px",
+              top: imgRect.bottom - containerRect.top - handleOffset + "px",
+          };
+
       handle.style.left = position.left;
       handle.style.top = position.top;
-    });
-  };  
+  });
+};
+
 
   return (
     <div className="card-container">
