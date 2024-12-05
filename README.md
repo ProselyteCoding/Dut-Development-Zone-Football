@@ -17,7 +17,7 @@
 <br />
 
 <p align="center">
-  <a href="https://github.com/shaojintian/Best_README_template/">
+  <a href="https://github.com/ProselyteCoding/Dut-Development-Zone-Football/">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -25,14 +25,14 @@
   <p align="center">
     约球、打卡、战术、新闻、论坛...用爱发电，尝试仿照其他大俱乐部官网做一个网站，磨练自己web技术的同时希望能为平时的足球生活带来一些趣味和便利
     <br />
-    <a href="https://github.com/shaojintian/Best_README_template"><strong>探索本项目的文档 »</strong></a>
+    <a href="https://github.com/ProselyteCoding/Dut-Development-Zone-Football"><strong>探索本项目的文档 »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/shaojintian/Best_README_template">查看Demo</a>
+    <a href="https://github.com/ProselyteCoding/Dut-Development-Zone-Football">查看Demo</a>
     ·
-    <a href="https://github.com/shaojintian/Best_README_template/issues">报告Bug</a>
+    <a href="https://github.com/ProselyteCoding/Dut-Development-Zone-Football/issues">报告Bug</a>
     ·
-    <a href="https://github.com/shaojintian/Best_README_template/issues">提出新特性</a>
+    <a href="https://github.com/ProselyteCoding/Dut-Development-Zone-Football/issues">提出新特性</a>
   </p>
 
 </p>
@@ -104,7 +104,7 @@ filetree
 
 ### 开发的架构 
 
-请阅读[ARCHITECTURE.md](https://github.com/shaojintian/Best_README_template/blob/master/ARCHITECTURE.md) 查阅为该项目的架构。
+请阅读[ARCHITECTURE.md](https://github.com/ProselyteCoding/Dut-Development-Zone-Football/blob/master/ARCHITECTURE.md) 查阅为该项目的架构。
 
 ### 部署
 
@@ -147,7 +147,7 @@ xxx@xxxx
 
 ### 版权说明
 
-该项目签署了MIT 授权许可，详情请参阅 [LICENSE.txt](https://github.com/shaojintian/Best_README_template/blob/master/LICENSE.txt)
+该项目签署了MIT 授权许可，详情请参阅 [LICENSE.txt](https://github.com/ProselyteCoding/Dut-Development-Zone-Football/blob/master/LICENSE.txt)
 
 ### 鸣谢
 
@@ -160,16 +160,16 @@ xxx@xxxx
 - [xxxxxxxxxxxxxx](https://connoratherton.com/loaders)
 
 <!-- links -->
-[your-project-path]:shaojintian/Best_README_template
-[contributors-shield]: https://img.shields.io/github/contributors/shaojintian/Best_README_template.svg?style=flat-square
-[contributors-url]: https://github.com/shaojintian/Best_README_template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/shaojintian/Best_README_template.svg?style=flat-square
-[forks-url]: https://github.com/shaojintian/Best_README_template/network/members
-[stars-shield]: https://img.shields.io/github/stars/shaojintian/Best_README_template.svg?style=flat-square
-[stars-url]: https://github.com/shaojintian/Best_README_template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/shaojintian/Best_README_template.svg?style=flat-square
-[issues-url]: https://img.shields.io/github/issues/shaojintian/Best_README_template.svg
-[license-shield]: https://img.shields.io/github/license/shaojintian/Best_README_template.svg?style=flat-square
-[license-url]: https://github.com/shaojintian/Best_README_template/blob/master/LICENSE.txt
+[your-project-path]:ProselyteCoding/Dut-Development-Zone-Football
+[contributors-shield]: https://img.shields.io/github/contributors/ProselyteCoding/Dut-Development-Zone-Football.svg?style=flat-square
+[contributors-url]: https://github.com/ProselyteCoding/Dut-Development-Zone-Football/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/ProselyteCoding/Dut-Development-Zone-Football.svg?style=flat-square
+[forks-url]: https://github.com/ProselyteCoding/Dut-Development-Zone-Football/network/members
+[stars-shield]: https://img.shields.io/github/stars/ProselyteCoding/Dut-Development-Zone-Football.svg?style=flat-square
+[stars-url]: https://github.com/ProselyteCoding/Dut-Development-Zone-Football/stargazers
+[issues-shield]: https://img.shields.io/github/issues/ProselyteCoding/Dut-Development-Zone-Football.svg?style=flat-square
+[issues-url]: https://img.shields.io/github/issues/ProselyteCoding/Dut-Development-Zone-Football.svg
+[license-shield]: https://img.shields.io/github/license/ProselyteCoding/Dut-Development-Zone-Football.svg?style=flat-square
+[license-url]: https://github.com/ProselyteCoding/Dut-Development-Zone-Football/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/shaojintian
+[linkedin-url]: https://linkedin.com/in/ProselyteCoding
