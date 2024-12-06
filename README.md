@@ -37,8 +37,6 @@
 
 </p>
 
-
- 本篇README.md面向开发者
  
 ## 目录
 
@@ -55,11 +53,11 @@
 - [作者](#作者)
 - [鸣谢](#鸣谢)
 
-### 上手指南
-
-请将所有链接中的“shaojintian/Best_README_template”改为“your_github_name/your_repository”
-
-
+##### 当前进展
+1. 页面设计: navbar、sidebar、footer进行了初步样式设计，暂无api
+2. authentication: 使用了之前todolist项目的代码，还未检验
+3. DIY球星卡: 对于默认图片实现了可拖拽和变形功能，实现了导出图片功能，右侧控制部分设计已完成还差逻辑实现以及与左侧的关联
+4. 其他部分: 暂未开始
 
 ###### 开发前的配置要求
 
@@ -76,31 +74,8 @@ git clone https://github.com/shaojintian/Best_README_template.git
 ```
 
 ### 文件目录说明
-eg:
 
-```
-filetree 
-├── ARCHITECTURE.md
-├── LICENSE.txt
-├── README.md
-├── /account/
-├── /bbs/
-├── /docs/
-│  ├── /rules/
-│  │  ├── backend.txt
-│  │  └── frontend.txt
-├── manage.py
-├── /oa/
-├── /static/
-├── /templates/
-├── useless.md
-└── /util/
-
-```
-
-
-
-
+暂未完成，更新变化大，不便展示
 
 ### 开发的架构 
 
@@ -139,9 +114,8 @@ filetree
 
 ### 作者
 
-xxx@xxxx
-
-知乎:xxxx  &ensp; qq:xxxxxx    
+邮箱:3197908785@qq.com
+微信:xxxx ; qq:3197908785   
 
  *您也可以在贡献者名单中参看所有参与该项目的开发者。*
 
@@ -151,7 +125,7 @@ xxx@xxxx
 
 ### 鸣谢
 
-
+（此处还未设计，为原模板内容）
 - [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
 - [Img Shields](https://shields.io)
 - [Choose an Open Source License](https://choosealicense.com)
