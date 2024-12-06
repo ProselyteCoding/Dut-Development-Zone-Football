@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   flex-direction: row;
+  position: relative;
 
   .card {
     display: flex;
@@ -146,7 +147,7 @@
     width: 900px;
     height: 900px;
     margin-left: 50px;
-    z-index: -1;
+
     .control-container {
       display: flex;
       align-items: center;

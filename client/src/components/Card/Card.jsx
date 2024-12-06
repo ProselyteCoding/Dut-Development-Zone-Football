@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useRef, useEffect } from "react";
 import "./Card.css";
 import faceImage from "../../assets/images/face.png";
+import html2canvas from "html2canvas";
 
 const Card = () => {
   const imgRef = useRef(null);
@@ -51,7 +52,6 @@ const Card = () => {
       imgRef.current.style.top = `${y - containerRect.top}px`;
     } else if (isResizing && resizeHandle) {
       handleResizeMouseMove(e);
-      
     }
     updateResizeHandles();
   };
@@ -70,43 +70,41 @@ const Card = () => {
     let newWidth = imgSize.width;
     let newHeight = imgSize.height;
     let newLeft = imgRect.left; // 默认左位置
-    let newTop = imgRect.top;   // 默认顶部位置
+    let newTop = imgRect.top; // 默认顶部位置
 
     // 调整大小时的逻辑
     if (resizeHandle === "bottom-right") {
-        newWidth = e.clientX - imgRect.left;
-        newHeight = e.clientY - imgRect.top;
+      newWidth = e.clientX - imgRect.left;
+      newHeight = e.clientY - imgRect.top;
     } else if (resizeHandle === "bottom-left") {
-        newWidth = imgRect.right - e.clientX;
-        newHeight = e.clientY - imgRect.top;
-        newLeft = e.clientX; // 更新左边位置
+      newWidth = imgRect.right - e.clientX;
+      newHeight = e.clientY - imgRect.top;
+      newLeft = e.clientX; // 更新左边位置
     } else if (resizeHandle === "top-right") {
-        newWidth = e.clientX - imgRect.left;
-        newHeight = imgRect.bottom - e.clientY;
-        newTop = e.clientY; // 更新上边位置
-        newLeft = imgRect.left; // 确保左边位置不变
+      newWidth = e.clientX - imgRect.left;
+      newHeight = imgRect.bottom - e.clientY;
+      newTop = e.clientY; // 更新上边位置
+      newLeft = imgRect.left; // 确保左边位置不变
     } else if (resizeHandle === "top-left") {
-        newWidth = imgRect.right - e.clientX;
-        newHeight = imgRect.bottom - e.clientY;
-        newLeft = e.clientX; // 更新左边位置
-        newTop = e.clientY;  // 更新上边位置
+      newWidth = imgRect.right - e.clientX;
+      newHeight = imgRect.bottom - e.clientY;
+      newLeft = e.clientX; // 更新左边位置
+      newTop = e.clientY; // 更新上边位置
     }
 
     // 限制新尺寸在容器边界内
     if (newWidth > 50 && newHeight > 50) {
-        setImgSize({ width: newWidth, height: newHeight });
-        imgRef.current.style.width = `${newWidth}px`; // 设置新的宽度
-        imgRef.current.style.height = `${newHeight}px`; // 设置新的高度
-        
-        // 更新图片的位置，以对角顶点为基准
-        imgRef.current.style.left = `${newLeft - containerRect.left}px`;
-        imgRef.current.style.top = `${newTop - containerRect.top}px`;
-        
-        updateResizeHandles(); // 调整后更新手柄位置
+      setImgSize({ width: newWidth, height: newHeight });
+      imgRef.current.style.width = `${newWidth}px`; // 设置新的宽度
+      imgRef.current.style.height = `${newHeight}px`; // 设置新的高度
+
+      // 更新图片的位置，以对角顶点为基准
+      imgRef.current.style.left = `${newLeft - containerRect.left}px`;
+      imgRef.current.style.top = `${newTop - containerRect.top}px`;
+
+      updateResizeHandles(); // 调整后更新手柄位置
     }
-};
-
-
+  };
 
   // 在组件挂载时添加文档的 mouseup 事件监听
   useEffect(() => {
@@ -123,39 +121,79 @@ const Card = () => {
   }, []);
 
   // 更新手柄位置
-const updateResizeHandles = () => {
-  const handles = document.querySelectorAll(".resizer");
-  const imgRect = imgRef.current.getBoundingClientRect(); // 获取图片的边界
-  const containerRect = containerRef.current.getBoundingClientRect(); // 获取容器的边界
-  const handleOffset = 5; // 手柄偏移量
+  const updateResizeHandles = () => {
+    const handles = document.querySelectorAll(".resizer");
+    const imgRect = imgRef.current.getBoundingClientRect(); // 获取图片的边界
+    const containerRect = containerRef.current.getBoundingClientRect(); // 获取容器的边界
+    const handleOffset = 5; // 手柄偏移量
 
-  handles.forEach((handle) => {
+    handles.forEach((handle) => {
       const position = handle.classList.contains("top-left")
-          ? {
-              left: imgRect.left - containerRect.left - handle.offsetWidth + handleOffset + "px",
-              top: imgRect.top - containerRect.top - handle.offsetHeight + handleOffset + "px",
+        ? {
+            left:
+              imgRect.left -
+              containerRect.left -
+              handle.offsetWidth +
+              handleOffset +
+              "px",
+            top:
+              imgRect.top -
+              containerRect.top -
+              handle.offsetHeight +
+              handleOffset +
+              "px",
           }
-          : handle.classList.contains("top-right")
-          ? {
-              left: imgRect.right - containerRect.left - handleOffset + "px",
-              top: imgRect.top - containerRect.top - handle.offsetHeight + handleOffset + "px",
+        : handle.classList.contains("top-right")
+        ? {
+            left: imgRect.right - containerRect.left - handleOffset + "px",
+            top:
+              imgRect.top -
+              containerRect.top -
+              handle.offsetHeight +
+              handleOffset +
+              "px",
           }
-          : handle.classList.contains("bottom-left")
-          ? {
-              left: imgRect.left - containerRect.left - handle.offsetWidth + handleOffset + "px",
-              top: imgRect.bottom - containerRect.top - handleOffset + "px",
+        : handle.classList.contains("bottom-left")
+        ? {
+            left:
+              imgRect.left -
+              containerRect.left -
+              handle.offsetWidth +
+              handleOffset +
+              "px",
+            top: imgRect.bottom - containerRect.top - handleOffset + "px",
           }
-          : // bottom-right
+        : // bottom-right
           {
-              left: imgRect.right - containerRect.left - handleOffset + "px",
-              top: imgRect.bottom - containerRect.top - handleOffset + "px",
+            left: imgRect.right - containerRect.left - handleOffset + "px",
+            top: imgRect.bottom - containerRect.top - handleOffset + "px",
           };
 
       handle.style.left = position.left;
       handle.style.top = position.top;
-  });
-};
+    });
+  };
 
+  const handleGenerateImage = () => {
+    const element = containerRef.current; // 获取.data元素
+    if (element) {
+      html2canvas(element, {
+        logging: true,
+        useCORS: true,
+        ignoreElements: (el) => {
+          // 忽略具有 resizer 类的元素
+          return el.classList.contains("resizer");
+        },
+      }).then((canvas) => {
+        const link = document.createElement("a");
+        link.href = canvas.toDataURL("image/png");
+        link.download = "Your-DIY-Card.png";
+        link.click();
+      });
+    } else {
+      console.error("Element not found"); // 如果未找到元素输出错误
+    }
+  };
 
   return (
     <div className="card-container">
@@ -348,7 +386,12 @@ const updateResizeHandles = () => {
 
           <div className="control-save-container">
             <button className="control-save-btn">保存数据</button>
-            <button className="control-generate-btn">生成图片</button>
+            <button
+              className="control-generate-btn"
+              onClick={handleGenerateImage}
+            >
+              生成图片
+            </button>
           </div>
         </div>
       </div>
