@@ -30,8 +30,11 @@
       position: absolute;
       width: 10px; /* 手柄宽度 */
       height: 10px; /* 手柄高度 */
-      background-color: rgba(255, 255, 0, 0.8); /* 手柄颜色 */
+      border-radius: 50%; /* 圆角半径 */
+      border: 1px solid #fff; /* 边框 */
+      background-color: rgba(55, 124, 135, 0.8); /* 手柄颜色 */
       cursor: nwse-resize; /* 拉伸时的指针样式 */
+      z-index: 2;
     }
     
     .top-left {

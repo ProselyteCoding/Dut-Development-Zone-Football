@@ -12,6 +12,26 @@ const Card = () => {
   const [imgSize, setImgSize] = useState({ width: 175, height: 175 }); //图片大小
   const [offset, setOffset] = useState({ x: 0, y: 0 }); //偏移
   const [resizeHandle, setResizeHandle] = useState(null); // 存储正在使用的手柄
+  const [playerData, setPlayerData] = useState({
+    face: '../../assets/images/face.png',
+    name: 'Haaland',
+    overall: 91,
+    pac: 88,
+    sho: 92,
+    pas: 70,
+    dri: 81,
+    def: 45,
+    phy: 88,
+    position: 'ST',
+    replacePosition: 'LW',
+    foot: 'Right',
+    style: '锋霸',
+    honors: '欧冠',
+    description: '爱吃小孩',
+    nation: '',
+    league: '',
+    club: ''
+  });  
 
   // 拖动图片
   const handlePictureMouseDown = (e) => {
@@ -236,33 +256,33 @@ const Card = () => {
         />
 
         <div className="data">
-          <div className="overall">91</div>
-          <div className="position">ST</div>
-          <div className="name">Haaland</div>
+          <div className="overall">{playerData.overall}</div>
+          <div className="position">{playerData.position}</div>
+          <div className="name">{playerData.name}</div>
           <ul className="data-list">
             <li className="data-item" id="pac">
               <div className="type">PAC</div>
-              <div className="value">88</div>
+              <div className="value">{playerData.pac}</div>
             </li>
             <li className="data-item" id="sho">
               <div className="type">SHO</div>
-              <div className="value">92</div>
+              <div className="value">{playerData.sho}</div>
             </li>
             <li className="data-item" id="pas">
               <div className="type">PAS</div>
-              <div className="value">70</div>
+              <div className="value">{playerData.pas}</div>
             </li>
             <li className="data-item" id="dri">
               <div className="type">DRI</div>
-              <div className="value">81</div>
+              <div className="value">{playerData.dri}</div>
             </li>
             <li className="data-item" id="def">
               <div className="type">DEF</div>
-              <div className="value">45</div>
+              <div className="value">{playerData.def}</div>
             </li>
             <li className="data-item" id="phy">
               <div className="type">PHY</div>
-              <div className="value">88</div>
+              <div className="value">{playerData.phy}</div>
             </li>
           </ul>
           <ul className="logo-list">
