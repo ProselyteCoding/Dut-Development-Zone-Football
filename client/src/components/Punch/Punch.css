@@ -1,0 +1,28 @@
+.punch-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+  left: 300px;
+
+  .punch-title{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 50px;
+    color: white;
+  }
+  .punch-button{
+    margin-top: 50px;
+  }
+  .punch-information{
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 50px;
+    color: white;
+  }
+}
