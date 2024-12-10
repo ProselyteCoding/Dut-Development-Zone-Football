@@ -1,10 +1,11 @@
 import { useContext, useEffect, useState } from "react";
-import "../App.css";
-import Footer from "../components/Footer/Footer";
-import Navbar from "../components/Navbar/Navbar";
+import "../../App.css";
+import Footer from "../../../src/components/Footer/Footer";
+import Navbar from "../../../src/components/Navbar/Navbar";
 import axios from "axios";
-import { AuthContext } from "../context/authContext";
-import Sidebar from "../components/Sidebar/Sidebar";
+import { AuthContext } from "../../../src/context/authContext";
+import Sidebar from "../../../src/components/Sidebar/Sidebar";
+import Card from "../../../src/components/Card/Card";
 
 //主页面，也是未登录的代办操作页面
 function Home() {
@@ -34,9 +35,7 @@ function Home() {
       <div className="App">
         <Navbar/>
         <Sidebar />
-        <div className="workspace">
-
-        </div>
+        <Card />
         <Footer />
       </div>
     </div>
