@@ -3,9 +3,11 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  height: 30vh;
   position: relative;
-  left: 300px;
+  margin-top: 40px;
+  margin-left: 30vw;
+  width: 30vw;
 
   .punch-title{
     font-size: 30px;

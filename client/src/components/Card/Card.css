@@ -3,6 +3,8 @@
   align-items: center;
   flex-direction: row;
   position: relative;
+  margin-top: 50px;
+  margin-bottom: 50px;
 
   .card {
     display: flex;

@@ -68,10 +68,6 @@ const Login = () => {
         </form>
       </div>
 
-      <Punch />
-
-      <Card />
-
       <Footer />
     </div>
   );
