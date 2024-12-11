@@ -5,16 +5,12 @@
   flex-direction: column;
   height: 30vh;
   position: relative;
-  margin-top: 40px;
+  margin-top: 140px;
   margin-left: 30vw;
+  margin-bottom: 30px;
   width: 30vw;
+  border: 1px solid white;
 
-  .punch-title{
-    font-size: 30px;
-    font-weight: bold;
-    margin-top: 50px;
-    color: white;
-  }
   .punch-button{
     margin-top: 50px;
   }

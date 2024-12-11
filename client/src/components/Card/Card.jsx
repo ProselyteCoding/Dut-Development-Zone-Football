@@ -5,16 +5,25 @@ import faceImage from "../../assets/images/face.png";
 import html2canvas from "html2canvas";
 
 const Card = () => {
+  // 图片元素
   const imgRef = useRef(null);
+  // 图片容器元素
   const containerRef = useRef(null);
+
+  // 是否拖动图片
   const [isDragging, setIsDragging] = useState(false);
+  // 是否调整图片大小
   const [isResizing, setIsResizing] = useState(false);
-  const [imgSize, setImgSize] = useState({ width: 175, height: 175 }); //图片大小
-  const [offset, setOffset] = useState({ x: 0, y: 0 }); //偏移
-  const [resizeHandle, setResizeHandle] = useState(null); // 存储正在使用的手柄
+  //图片大小
+  const [imgSize, setImgSize] = useState({ width: 175, height: 175 });
+  //偏移
+  const [offset, setOffset] = useState({ x: 0, y: 0 });
+  // 存储正在使用的手柄
+  const [resizeHandle, setResizeHandle] = useState(null);
+  // 卡牌数据
   const [playerData, setPlayerData] = useState({
-    face: '../../assets/images/face.png',
-    name: 'Haaland',
+    face: "../../assets/images/face.png",
+    name: "Haaland",
     overall: 91,
     pac: 88,
     sho: 92,
@@ -22,16 +31,36 @@ const Card = () => {
     dri: 81,
     def: 45,
     phy: 88,
-    position: 'ST',
-    replacePosition: 'LW',
-    foot: 'Right',
-    style: '锋霸',
-    honors: '欧冠',
-    description: '爱吃小孩',
-    nation: '',
-    league: '',
-    club: ''
-  });  
+    position: "ST",
+    replacePosition: "LW",
+    foot: "Right",
+    style: "锋霸",
+    honors: "欧冠",
+    description: "爱吃小孩",
+    nation: "",
+    league: "",
+    club: "",
+  });
+  const [tempInputData, setTempInputData] = useState({
+    face: playerData.face,
+    name: playerData.name,
+    overall: playerData.overall,
+    pac: playerData.pac,
+    sho: playerData.sho,
+    pas: playerData.pas,
+    dri: playerData.dri,
+    def: playerData.def,
+    phy: playerData.phy,
+    position: playerData.position,
+    replacePosition: playerData.replacePosition,
+    foot: playerData.foot,
+    style: playerData.style,
+    honors: playerData.honors,
+    description: playerData.description,
+    nation: playerData.nation,
+    league: playerData.league,
+    club: playerData.club,
+  });
 
   // 拖动图片
   const handlePictureMouseDown = (e) => {
@@ -215,6 +244,25 @@ const Card = () => {
     }
   };
 
+  // 处理输入数据变化
+  const handlePlayerDataChange = (e) => {
+    const { id, value } = e.target;
+    setTempInputData((prevData) => ({
+      ...prevData,
+      [id]: value, // 更新临时输入数据
+    }));
+  };
+
+  // 处理保存数据
+  const handleSaveData = () => {
+    setPlayerData(tempInputData);
+  };
+
+  // 监听 playerData 变化
+  useEffect(() => {
+    console.log("更新后的玩家数据:", playerData);
+  }, [playerData]); // playerData 更新后打印
+
   return (
     <div className="card-container">
       <div
@@ -304,108 +352,166 @@ const Card = () => {
           <div className="control-overall-container">
             <div className="control-overall-item">
               <div className="control-overall-title">姓名</div>
-              <input type="text" placeholder="Haaland"></input>
+              <input
+                type="text"
+                defaultValue={playerData.name}
+                onChange={handlePlayerDataChange}
+              ></input>
             </div>
 
             <div className="control-overall-item">
               <div className="control-overall-title">综合</div>
-              <input type="number" placeholder="91"></input>
+              <input
+                type="number"
+                defaultValue={playerData.overall}
+                onChange={handlePlayerDataChange}
+              ></input>
             </div>
           </div>
 
           <div className="control-data-container">
             <div className="control-data-item">
               <div className="control-data-title">PAC</div>
-              <input type="number" placeholder="88"></input>
+              <input
+                type="number"
+                defaultValue={playerData.pac}
+                onChange={handlePlayerDataChange}
+              ></input>
             </div>
 
             <div className="control-data-item">
               <div className="control-data-title">SHO</div>
-              <input type="number" placeholder="92"></input>
+              <input
+                type="number"
+                defaultValue={playerData.sho}
+                onChange={handlePlayerDataChange}
+              ></input>
             </div>
 
             <div className="control-data-item">
               <div className="control-data-title">PAS</div>
-              <input type="number" placeholder="70"></input>
+              <input
+                type="number"
+                defaultValue={playerData.pas}
+                onChange={handlePlayerDataChange}
+              ></input>
             </div>
 
             <div className="control-data-item">
               <div className="control-data-title">DRI</div>
-              <input type="number" placeholder="81"></input>
+              <input
+                type="number"
+                defaultValue={playerData.dri}
+                onChange={handlePlayerDataChange}
+              ></input>
             </div>
 
             <div className="control-data-item">
               <div className="control-data-title">DEF</div>
-              <input type="number" placeholder="45"></input>
+              <input
+                type="number"
+                defaultValue={playerData.def}
+                onChange={handlePlayerDataChange}
+              ></input>
             </div>
 
             <div className="control-data-item">
               <div className="control-data-title">PHY</div>
-              <input type="number" placeholder="88"></input>
+              <input
+                type="number"
+                defaultValue={playerData.phy}
+                onChange={handlePlayerDataChange}
+              ></input>
             </div>
           </div>
 
           <div className="control-picture-container1">
             <div className="control-picture-item">
               <div className="control-picture-title">卡牌</div>
-              <input type="file"></input>
+              <input type="file" onChange={handlePlayerDataChange}></input>
             </div>
 
             <div className="control-picture-item">
               <div className="control-picture-title">国籍</div>
-              <input type="file"></input>
+              <input type="file" onChange={handlePlayerDataChange}></input>
             </div>
           </div>
 
           <div className="control-picture-container2">
             <div className="control-picture-item">
               <div className="control-picture-title">联赛</div>
-              <input type="file"></input>
+              <input type="file" onChange={handlePlayerDataChange}></input>
             </div>
 
             <div className="control-picture-item">
               <div className="control-picture-title">俱乐部</div>
-              <input type="file"></input>
+              <input type="file" onChange={handlePlayerDataChange}></input>
             </div>
           </div>
 
           <div className="custom-player-face">
             <div className="custom-player-face-title">头像</div>
-            <input type="file"></input>
+            <input type="file" onChange={handlePlayerDataChange}></input>
           </div>
 
           <div className="control-professional-container">
             <div className="control-professional-item">
               <div className="control-professional-title">位置</div>
-              <input type="text" placeholder="ST"></input>
+              <input
+                type="text"
+                defaultValue={playerData.position}
+                onChange={handlePlayerDataChange}
+              ></input>
             </div>
             <div className="control-professional-item">
               <div className="control-professional-title">替换位置</div>
-              <input type="text" placeholder="LW"></input>
+              <input
+                type="text"
+                defaultValue={playerData.replacePosition}
+                onChange={handlePlayerDataChange}
+              ></input>
             </div>
             <div className="control-professional-item">
               <div className="control-professional-title">惯用脚</div>
-              <input type="text" placeholder="Right"></input>
+              <input
+                type="text"
+                defaultValue={playerData.foot}
+                onChange={handlePlayerDataChange}
+              ></input>
             </div>
           </div>
 
           <div className="control-diy-container">
             <div className="control-diy-item">
               <div className="control-diy-title">个人风格</div>
-              <input type="text" placeholder="锋霸"></input>
+              <input
+                type="text"
+                defaultValue={playerData.style}
+                onChange={handlePlayerDataChange}
+              ></input>
             </div>
             <div className="control-diy-item">
               <div className="control-diy-title">荣誉</div>
-              <input type="text" placeholder="欧冠"></input>
+              <input
+                type="text"
+                defaultValue={playerData.honors}
+                onChange={handlePlayerDataChange}
+              ></input>
             </div>
             <div className="control-diy-item">
               <div className="control-diy-title">个人描述</div>
-              <input type="text" placeholder="爱吃小孩"></input>
+              <input
+                type="text"
+                defaultValue={playerData.description}
+                onChange={handlePlayerDataChange}
+              ></input>
             </div>
           </div>
 
           <div className="control-save-container">
-            <button className="control-save-btn">保存数据</button>
+            <button className="control-save-btn" onClick={handleSaveData}>
+              保存数据
+            </button>
             <button
               className="control-generate-btn"
               onClick={handleGenerateImage}
