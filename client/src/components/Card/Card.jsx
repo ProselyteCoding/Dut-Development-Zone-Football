@@ -335,13 +335,13 @@ const Card = () => {
           </ul>
           <ul className="logo-list">
             <li className="logo-item" id="nationality">
-              x
+              {playerData.nation}
             </li>
             <li className="logo-item" id="league">
-              y
+              {playerData.league}
             </li>
             <li className="logo-item" id="club">
-              z
+              {playerData.club}
             </li>
           </ul>
         </div>
