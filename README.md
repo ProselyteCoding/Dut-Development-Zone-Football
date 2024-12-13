@@ -18,7 +18,7 @@
 
 <p align="center">
   <a href="https://github.com/ProselyteCoding/Dut-Development-Zone-Football/">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="readmeAssets/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Dut Development Zone Football 大工开发区足球</h3>
@@ -56,8 +56,9 @@
 ##### 当前进展
 1. 页面设计: navbar、sidebar、footer进行了初步样式设计，暂无api
 2. authentication: 使用了之前todolist项目的代码，还未检验
-3. DIY球星卡: 对于默认图片实现了可拖拽和变形功能，实现了导出图片功能，右侧控制部分设计已完成还差逻辑实现以及与左侧的关联
-4. 其他部分: 暂未开始
+3. DIY球星卡: 对于默认图片实现了可拖拽和变形功能，实现了导出图片功能，右侧控制部分设计已完成还差逻辑实现以及与左侧的关联以及和服务器连接
+4. 顶部slider正在制作
+其他部分: 暂未开始
 
 ###### 开发前的配置要求
 
