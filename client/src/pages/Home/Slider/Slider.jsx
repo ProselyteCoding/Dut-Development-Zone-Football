@@ -14,7 +14,7 @@ const Slider = () => {
     slider2,
     slider3,
     slider4,
-    slider5,
+    slider5
   ];
 
   return (
@@ -29,7 +29,13 @@ const Slider = () => {
             <img className='slider-item' key={index} src={slider} alt={`Slider ${index + 1}`} />
           ))}
         </div>
-
+        <div className="slider-dots-container">
+          <button className="slider-btn-dot"></button>
+          <button className="slider-btn-dot"></button>
+          <button className="slider-btn-dot"></button>
+          <button className="slider-btn-dot"></button>
+          <button className="slider-btn-dot"></button>
+        </div>
       </div>
     </div>
   );

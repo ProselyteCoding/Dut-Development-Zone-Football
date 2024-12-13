@@ -8,6 +8,7 @@ import Sidebar from "../../../src/components/Sidebar/Sidebar";
 import Card from "../../../src/components/Card/Card";
 import Punch from "../../components/Punch/Punch";
 import Slider from "./Slider/Slider";
+import Feature from "./Feature/Feature";
 
 //主页面，也是未登录的代办操作页面
 function Home() {
@@ -37,6 +38,7 @@ function Home() {
       <div className="App">
         <Navbar/>
         <Sidebar />
+        <Feature />
         <Slider />
         <Punch />
         <Card />

@@ -1,6 +1,6 @@
 .slider-container {
     left: 250px;
-    top: 50px;
+    top: 30px;
     width: 1380px;
     height: 500px;
     position: relative;
@@ -16,6 +16,7 @@
     justify-content: center;
     position: absolute;
     left: 0;
+    top: 70px;
     height: 300px;
     width: 70px;
     border: none;
@@ -26,6 +27,7 @@
   .slider-btn-prev:hover {
     background: rgb(241, 105, 0);
     opacity: 0.5;
+    cursor: pointer;
   }
   .slider-btn-next {
     display: flex;
@@ -33,6 +35,7 @@
     justify-content: center;
     position: absolute;
     right: 0; 
+    top: 70px;
     height: 300px;
     width: 70px;
     border: none;
@@ -43,10 +46,38 @@
   .slider-btn-next:hover {
     background: rgb(0, 161, 241);
     opacity: 0.5;
+    cursor: pointer;
   }
+  .slider-dots-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: row;
+    width: 200px;
+    height: 60px;
+    gap: 8px;
+
+  .slider-btn-dot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: rgb(225, 107, 10);
+    cursor: pointer;
+    border: 2px solid #ccc;
+    transition: all 0.3s ease-in-out;
+  }
+   .slider-btn-dot.active {
+      background: rgb(0, 161, 241);
+   }
+}
   .slider-list {
     width: 1380px;
-    height: 300px;
+    height: 600px;
     position: relative;
     overflow: hidden;
     display: flex;
@@ -55,8 +86,12 @@
     flex-direction: row;
     .slider-item {
       width: 450px;
-      height: 500px;
+      height: 337.5px;
       object-fit: cover;
+    }
+    .slider-item:hover {
+      cursor: pointer;
+      scale: 1.05;
     }
   }
 }
