@@ -11,6 +11,11 @@ const Feature = () => {
         <div className="feature-decorator-right"></div>
         <img src={feature} alt='feature' />
       </div>
+      <div className="feature-dots-container">
+          <button className="feature-btn-dot"></button>
+          <button className="feature-btn-dot"></button>
+          <button className="feature-btn-dot"></button>
+        </div>
       <div className='feature-bottom'>
         <img src={texture} alt='texture' />
       </div>

@@ -1,10 +1,10 @@
 import React from 'react';
 import './Slider.css';
-import slider1 from '../../../assets/images/slider-1.png';
-import slider2 from '../../../assets/images/slider-2.png';
-import slider3 from '../../../assets/images/slider-3.png';
-import slider4 from '../../../assets/images/slider-4.png';
-import slider5 from '../../../assets/images/slider-5.png';
+import slider1 from '../../../assets/images/43.png';
+import slider2 from '../../../assets/images/43.png';
+import slider3 from '../../../assets/images/43.png';
+import slider4 from '../../../assets/images/43.png';
+import slider5 from '../../../assets/images/43.png';
 import leftArrow from '../../../assets/images/left-arrow-button.png';
 import rightArrow from '../../../assets/images/right-arrow-button.png';
 
@@ -28,13 +28,6 @@ const Slider = () => {
           {sliders.map((slider, index) => (
             <img className='slider-item' key={index} src={slider} alt={`Slider ${index + 1}`} />
           ))}
-        </div>
-        <div className="slider-dots-container">
-          <button className="slider-btn-dot"></button>
-          <button className="slider-btn-dot"></button>
-          <button className="slider-btn-dot"></button>
-          <button className="slider-btn-dot"></button>
-          <button className="slider-btn-dot"></button>
         </div>
       </div>
     </div>
