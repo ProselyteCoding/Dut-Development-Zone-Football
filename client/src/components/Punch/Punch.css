@@ -2,25 +2,96 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  height: 30vh;
+  flex-direction: row;
+  height: 400px;
   position: relative;
   margin-top: 140px;
-  margin-left: 30vw;
+  margin-left: 300px;
   margin-bottom: 30px;
-  width: 30vw;
-  border: 1px solid white;
+  width: 1250px;
+  border-radius: 10px;
+  background-color: #1a214a;
 
-  .punch-button{
-    margin-top: 20px;
-  }
-  .punch-information{
-    display: flex;    
+  .punch-left-container {
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    text-align: center;
-    margin-top: 50px;
-    color: white;
+    width: 600px;
+    height: 300px;
+    position: relative;
+
+    .punch-rank {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      width: 600px;
+      height: 400px;
+      position: relative;
+      border: 1px solid white;
+      left: -280px;
+
+      .punch-rank-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 200px;
+        width: 300px;
+        position: relative;
+        .punch-rank-item {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: row;
+          margin-right: 20px;
+          width: 100px;
+          height: 15px;
+          border-radius: 10px;
+          background-color: #3c457b;
+          color: white;
+          cursor: pointer;
+        }
+      }
+      .punch-rank-list:first-child {
+        left: 100px;
+        position: relative;
+
+      }
+      .punch-rank-list:last-child {
+        right: 100px;
+        position: relative;
+      }
+    }
+    .punch-graph {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 600px;
+      height: 150px;
+      border: 1px solid white;
+      position: relative;
+      left: -280px;
+      top: 20px;
+    }
+  }
+  .punch-right-container {
+    .punch-button {
+      margin-top: 20px;
+    }
+    .punch-information {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      margin-top: 50px;
+      color: white;
+      position: relative;
+    }
   }
 }

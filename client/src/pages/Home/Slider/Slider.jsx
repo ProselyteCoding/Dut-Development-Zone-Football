@@ -17,12 +17,18 @@ const Slider = () => {
     slider5
   ];
 
+  const handlePrev = () => {
+  }
+
+  const handleNext = () => {
+  }
+
   return (
     <div>
       <div className='slider-container'>
 
-        <button className="slider-btn-prev" style={{ backgroundImage: `url(${leftArrow})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}></button>
-        <button className="slider-btn-next" style={{ backgroundImage: `url(${rightArrow})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}></button>
+        <button className="slider-btn-prev" onClick={handlePrev} style={{ backgroundImage: `url(${leftArrow})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}></button>
+        <button className="slider-btn-next" onClick={handleNext} style={{ backgroundImage: `url(${rightArrow})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}></button>
 
         <div className="slider-list">
           {sliders.map((slider, index) => (
