@@ -16,8 +16,8 @@
     justify-content: center;
     position: absolute;
     left: 0;
-    top: 81px;
-    height: 337.5px;
+    top: 123.5px;
+    height: 253.125px;
     width: 70px;
     border: none;
     z-index: 2;
@@ -35,8 +35,8 @@
     justify-content: center;
     position: absolute;
     right: 0; 
-    top: 81px;
-    height: 337.5px;
+    top: 123.5px;
+    height: 253.125px;
     width: 70px;
     border: none;
     z-index: 2;
@@ -59,9 +59,12 @@
     flex-direction: row;
     .slider-item {
       width: 450px;
-      height: 337.5px;
+      height: 253.125px;
+      min-width: 450px;
       object-fit: cover;
       transition: all 0.2s ease-in-out;
+      opacity: 0.7;
+      
     }
     .slider-item:hover {
       cursor: pointer;

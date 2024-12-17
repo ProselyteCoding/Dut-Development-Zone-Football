@@ -1,8 +1,8 @@
 import React from 'react';
 import './Slider.css';
-import slider1 from '../../../assets/images/43.png';
-import slider2 from '../../../assets/images/43.png';
-import slider3 from '../../../assets/images/43.png';
+import slider1 from '../../../assets/images/slider1.png';
+import slider2 from '../../../assets/images/slider2.png';
+import slider3 from '../../../assets/images/slider3.png';
 import slider4 from '../../../assets/images/43.png';
 import slider5 from '../../../assets/images/43.png';
 import leftArrow from '../../../assets/images/left-arrow-button.png';

@@ -9,6 +9,7 @@ import Card from "../../../src/components/Card/Card";
 import Punch from "../../components/Punch/Punch";
 import Slider from "./Slider/Slider";
 import Feature from "./Feature/Feature";
+import ThreeDCanvas from "./ThreeDCanvas/ThreeDCanvas";
 
 //主页面，也是未登录的代办操作页面
 function Home() {
@@ -41,6 +42,7 @@ function Home() {
         <Feature />
         <Slider />
         <Punch />
+        <ThreeDCanvas />
         <Card />
         <Footer />
       </div>
