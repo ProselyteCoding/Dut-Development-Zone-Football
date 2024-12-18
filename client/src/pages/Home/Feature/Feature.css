@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 500px;
+  height: 700px;
   width: 1483px;
   overflow: hidden;
   .feature-decorator-left {
@@ -32,7 +32,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 500px;
+    height: 700px;
     width: 1483px;
     object-fit: cover;
     opacity: 0.5;
@@ -41,7 +41,7 @@
 }
 .feature-dots-container {
   left: 820px;
-  bottom: 250px;
+  bottom: 50px;
   display: flex;
   justify-content: center;
   align-items: center;

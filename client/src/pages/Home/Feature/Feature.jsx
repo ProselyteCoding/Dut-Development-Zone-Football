@@ -1,6 +1,6 @@
 import React from 'react'
 import './Feature.css'
-import feature from '../../../assets/images/feature.png'
+import feature from '../../../assets/images/feature.jpg'
 import texture from '../../../assets/images/texture.png'
 
 const Feature = () => {
