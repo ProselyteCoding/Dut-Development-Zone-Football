@@ -5,7 +5,7 @@ import texture from '../../../assets/images/texture.png'
 
 const Feature = () => {
   return (
-    <div>
+    <div className='feature-container'>
       <div className='feature-image-container'>
         <div className='feature-decorator-left'></div>
         <div className="feature-decorator-right"></div>
@@ -18,6 +18,10 @@ const Feature = () => {
         </div>
       <div className='feature-bottom'>
         <img src={texture} alt='texture' />
+      </div>
+      <div className='typewriter-container'>
+        <span className='typewriter-fixed'>在这里</span>
+        <span className='typewriter-text'></span>
       </div>
     </div>
   )

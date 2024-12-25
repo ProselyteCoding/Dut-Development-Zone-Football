@@ -37,14 +37,25 @@ function Home() {
   return (
     <div>
       <div className="App">
-        <Navbar/>
+        <Navbar />
         <Sidebar />
-        <Feature />
-        <Slider />
-        <Punch />
-        <ThreeDCanvas />
-        <Card />
-        <Footer />
+        <div className="container">
+          <div className="section">
+            <Feature />
+          </div>
+          <div className="section">
+            <Slider />
+            <ThreeDCanvas />
+            <Punch />
+          </div>
+
+          <div className="section">
+            <Card />
+          </div>
+          <div className="section">
+            <Footer />
+          </div>
+        </div>
       </div>
     </div>
   );
