@@ -1,0 +1,30 @@
+.typewriter-container {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 300px;
+    background: 0;
+    color: white;
+    /* border: 1px solid #ffffff; */
+
+    .typewriter-fixed {
+      width: 100px;
+      height: 40px;
+      /* border: 1px solid #ffffff; */
+      font-size: 30px;
+    }
+    .typewriter-text {
+      width: 300px;
+      font-size: 40px;
+      height: 40px;
+      /* border: 1px solid #ffffff; */
+      position: relative;
+      left: 180px;
+    }
+  }

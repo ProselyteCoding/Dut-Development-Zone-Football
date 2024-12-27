@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    border: 1px solid wheat;
+    z-index: 3;
+    height: 100px;
+    width: 100vw;
+    position: absolute;
+    background:red;
+    .screen {
+        height: 100px;
+        width: 100%;
+        background-color: red;
+    }
+}

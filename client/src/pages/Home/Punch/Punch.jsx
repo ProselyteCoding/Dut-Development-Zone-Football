@@ -1,6 +1,7 @@
 import React from "react";
-import "./Punch.css";
+import "./Punch.scss";
 import { useState, useRef, useEffect } from "react";
+import ThreeDCanvas from "./Trophy/Trophy"
 
 const Punch = () => {
   const [isPunched, setIsPunched] = useState(false);
@@ -44,6 +45,7 @@ const Punch = () => {
           {isPunched && (
             <div className="punch-information">打卡时间: {punchTime}</div>
           )}
+          <ThreeDCanvas />
         </div>
       </div>
     </div>

@@ -1,11 +1,10 @@
 .punch-container {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: row;
-  height: 400px;
+  height: 380px;
   position: relative;
-  margin-top: 140px;
+  top: 140px;
   margin-left: 300px;
   margin-bottom: 30px;
   width: 1250px;
@@ -14,43 +13,44 @@
 
   .punch-left-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    left: 42px;
     flex-direction: column;
     width: 600px;
-    height: 300px;
+    height: 310px;
     position: relative;
 
     .punch-rank {
       display: flex;
       align-items: center;
-      justify-content: center;
       flex-direction: row;
+      gap: 100px;
       color: white;
       font-size: 24px;
       font-weight: bold;
       width: 600px;
-      height: 400px;
+      height: 180px;
       position: relative;
       border: 1px solid white;
-      left: -280px;
 
       .punch-rank-list {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        height: 200px;
+        height: 180px;
         width: 300px;
         position: relative;
+        gap: 5px;
+        border: 1px solid white;
+
         .punch-rank-item {
           display: flex;
           align-items: center;
           justify-content: center;
           flex-direction: row;
           margin-right: 20px;
-          width: 100px;
-          height: 15px;
+          width: 170px;
+          height: 28px;
           border-radius: 10px;
           background-color: #3c457b;
           color: white;
@@ -58,12 +58,11 @@
         }
       }
       .punch-rank-list:first-child {
-        left: 100px;
+        left: 10px;
         position: relative;
-
       }
       .punch-rank-list:last-child {
-        right: 100px;
+        right: 10px;
         position: relative;
       }
     }
@@ -75,11 +74,18 @@
       height: 150px;
       border: 1px solid white;
       position: relative;
-      left: -280px;
-      top: 20px;
+      top: 5px;
     }
   }
   .punch-right-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 580px;
+    height: 310px;
+    left: 70px;
+    border: 1px solid white;
     .punch-button {
       margin-top: 20px;
     }

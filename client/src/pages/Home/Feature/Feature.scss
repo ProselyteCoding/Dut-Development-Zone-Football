@@ -1,10 +1,10 @@
 .feature-container {
   display: flex;
   flex-direction: column;
-  width: 1483px;
+  width: 1533px;
   height: 800px;
   top: 106px;
-  left: 200px;
+  left: 150px;
   position: relative;
   .feature-image-container {
     position: relative;
@@ -13,7 +13,7 @@
     align-items: center;
     justify-content: center;
     height: 700px;
-    width: 1483px;
+    width: 1533px;
     overflow: hidden;
     background: #ff40003d;
     .feature-decorator-left {
@@ -40,15 +40,15 @@
       align-items: center;
       justify-content: center;
       height: 700px;
-      width: 1483px;
+      width: 1533px;
       object-fit: cover;
       opacity: 0.2;
       z-index: 1;
     }
   }
   .feature-dots-container {
-    bottom: 150px;
-    left: 630px;
+    bottom: 130px;
+    left: 680px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,8 +78,8 @@
   }
   .feature-bottom {
     position: absolute;
-    height: 100px;
-    width: 1483px;
+    height: 80px;
+    width: 1533px;
     bottom: 50px;
     background: linear-gradient(180deg, #ac4e06 0%, #350148 100%);
     display: flex;
@@ -93,38 +93,8 @@
       z-index: 3;
       opacity: 0.1;
       object-fit: cover;
-      width: 1483px;
-      height: 100px;
-    }
-  }
-  .typewriter-container {
-    position: absolute;
-    top: 100px;
-    left: 100px;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 200px;
-    width: 300px;
-    background: 0;
-    color: white;
-    /* border: 1px solid #ffffff; */
-
-    .typewriter-fixed {
-      width: 100px;
-      height: 40px;
-      /* border: 1px solid #ffffff; */
-      font-size: 30px;
-    }
-    .typewriter-text {
-      width: 300px;
-      font-size: 40px;
-      height: 40px;
-      /* border: 1px solid #ffffff; */
-      position: relative;
-      left: 180px;
+      width: 1533px;
+      height: 80px;
     }
   }
 }

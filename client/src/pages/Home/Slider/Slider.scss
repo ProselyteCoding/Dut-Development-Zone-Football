@@ -1,8 +1,9 @@
 .slider-container {
     left: 250px;
-    top: 10px;
+    top: 120px;
     width: 1380px;
-    height: 500px;
+    height: 270px;
+    /* border: 1px solid #ccc; */
     position: relative;
     overflow: hidden;
     display: flex;
@@ -16,7 +17,6 @@
     justify-content: center;
     position: absolute;
     left: 0;
-    top: 123.5px;
     height: 253.125px;
     width: 70px;
     border: none;
@@ -35,7 +35,6 @@
     justify-content: center;
     position: absolute;
     right: 0; 
-    top: 123.5px;
     height: 253.125px;
     width: 70px;
     border: none;

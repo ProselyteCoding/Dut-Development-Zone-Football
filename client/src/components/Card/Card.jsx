@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useRef, useEffect } from "react";
-import "./Card.css";
+import "./Card.scss";
 import faceImage from "../../assets/images/face.png";
 import html2canvas from "html2canvas";
 

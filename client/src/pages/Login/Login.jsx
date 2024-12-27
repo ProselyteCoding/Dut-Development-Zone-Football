@@ -6,10 +6,8 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { AuthContext } from "../../context/authContext";
 import Navbar from "../../components/Navbar/Navbar";
-import "../../App.css";
+import "../../App.scss";
 import Sidebar from "../../components/Sidebar/Sidebar";
-import Card from "../../components/Card/Card";
-import Punch from "../../components/Punch/Punch";
 
 const Login = () => {
   //输入的用户信息
