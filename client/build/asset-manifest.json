@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Dut-Development-Zone-Football/static/css/main.55dfcefd.css",
+    "main.js": "/Dut-Development-Zone-Football/static/js/main.96c3cc21.js",
+    "static/media/feature.jpg": "/Dut-Development-Zone-Football/static/media/feature.7dc40146e44b87582772.jpg",
+    "static/media/slider3.jpg": "/Dut-Development-Zone-Football/static/media/slider3.ac5eb75d90fabdec24a9.jpg",
+    "static/media/slider4.jpg": "/Dut-Development-Zone-Football/static/media/slider4.4e89824c8ac9a47b377d.jpg",
+    "static/media/slider5.jpg": "/Dut-Development-Zone-Football/static/media/slider5.22063501bf2630fd9935.jpg",
+    "static/media/slider1.jpg": "/Dut-Development-Zone-Football/static/media/slider1.a6ecf5fcebc1ee390df3.jpg",
+    "static/media/texture.png": "/Dut-Development-Zone-Football/static/media/texture.ef3dcaf70002ef513fb0.png",
+    "static/media/slider2.jpg": "/Dut-Development-Zone-Football/static/media/slider2.eec302ef53833aa2e631.jpg",
+    "static/media/face.png": "/Dut-Development-Zone-Football/static/media/face.082efc0421f225aa382b.png",
+    "static/media/fifa23.png": "/Dut-Development-Zone-Football/static/media/fifa23.865fa198239eca0d83b3.png",
+    "index.html": "/Dut-Development-Zone-Football/index.html",
+    "main.55dfcefd.css.map": "/Dut-Development-Zone-Football/static/css/main.55dfcefd.css.map",
+    "main.96c3cc21.js.map": "/Dut-Development-Zone-Football/static/js/main.96c3cc21.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.55dfcefd.css",
+    "static/js/main.96c3cc21.js"
+  ]
+}
