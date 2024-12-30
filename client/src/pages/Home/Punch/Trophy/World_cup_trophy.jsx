@@ -12,7 +12,7 @@ import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function Model(props) {
-  const { nodes, materials } = useGLTF('/world_cup_trophy-transformed.glb')
+  const { nodes, materials } = useGLTF('/Dut-Development-Zone-Football/world_cup_trophy-transformed.glb')
   return (
     <group {...props} dispose={null} scale={[3,3,3]}>
       <mesh geometry={nodes.Object_8.geometry} material={materials.Trophy_Mtl} />
