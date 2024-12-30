@@ -23,4 +23,4 @@ export default function Model(props) {
   )
 }
 
-useGLTF.preload('/world_cup_trophy-transformed.glb')
+useGLTF.preload('/Dut-Development-Zone-Football/world_cup_trophy-transformed.glb')
