@@ -20,11 +20,11 @@ const Feature = () => {
         <button className="feature-btn-dot"></button>
         <button className="feature-btn-dot"></button>
       </div>
-      {/* <Bullet /> */}
+      <Bullet />
       <Typewriter />
-      <div className="feature-bottom">
+      {/* <div className="feature-bottom">
         <img src={texture} alt="texture" />
-      </div>
+      </div> */}
     </div>
   );
 };

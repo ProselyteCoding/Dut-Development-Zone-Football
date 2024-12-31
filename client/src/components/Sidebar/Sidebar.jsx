@@ -5,13 +5,13 @@ const Sidebar = () => {
   return (
     <div>
       <ul className="sidebar-list">
-        <li className="sidebar-item">Home</li>
-        <li className="sidebar-item">About</li>
-        <li className="sidebar-item">Contact</li>
-        <li className="sidebar-item">Services</li>
-        <li className="sidebar-item">Portfolio</li>
-        <li className="sidebar-item">Blog</li>
-        <li className="sidebar-item">Shop</li>
+        <li className="sidebar-item">首页</li>
+        <li className="sidebar-item">打卡</li>
+        <li className="sidebar-item">约球</li>
+        <li className="sidebar-item">新闻</li>
+        <li className="sidebar-item">球星卡</li>
+        <li className="sidebar-item">论坛</li>
+        <li className="sidebar-item">鸣谢</li>
       </ul>
     </div>
   )
