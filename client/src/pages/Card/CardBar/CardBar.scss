@@ -5,6 +5,7 @@
   position: relative;
   margin-top: 50px;
   margin-bottom: 50px;
+  top: 100px;
 
   .card {
     display: flex;
@@ -14,7 +15,7 @@
     width: 300px;
     height: 400px;
     margin-left: 300px;
-    background-image: url("../../assets/images/fifa23.png");
+    background-image: url("../../../assets/images/fifa23.png");
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;

@@ -1,7 +1,7 @@
 import React from "react";
 import "./Feature.scss";
 import feature from "../../../assets/images/feature.jpg";
-import texture from "../../../assets/images/texture.png";
+// import texture from "../../../assets/images/texture.png";
 import Typewriter from "./Typewriter/Typewriter";
 import Bullet from "./Bullet/Bullet";
 

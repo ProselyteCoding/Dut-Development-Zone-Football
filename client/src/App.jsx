@@ -1,9 +1,10 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./pages/Home/Home";
-import Register from "./pages/Register/Register";
-import Login from "./pages/Login/Login";
-import Team from "./pages/Team/Team";
+import Home from "./pages/Home/Home.jsx";
+import Register from "./pages/Register/Register.jsx";
+import Login from "./pages/Login/Login.jsx";
+import Team from "./pages/Team/Team.jsx";
+import Card from "./pages/Card/Card.jsx";
 
 const router = createBrowserRouter([
   {
@@ -45,7 +46,16 @@ const router = createBrowserRouter([
         <Login />
       </div>
     ),
+  },
+  {
+    path: "/card",
+    element: (
+      <div>
+        <Card />
+      </div>
+    ),
   }
+
 ]);
 
 const App = () => {

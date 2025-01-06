@@ -1,15 +1,15 @@
 import { useContext, useEffect, useState } from "react";
-import "../../App.scss";
-import Footer from "../../../src/components/Footer/Footer";
-import Navbar from "../../../src/components/Navbar/Navbar";
 import axios from "axios";
 import { AuthContext } from "../../../src/context/authContext";
+import "../../App.scss";
+import "./Home.scss"
+import Footer from "../../../src/components/Footer/Footer";
+import Navbar from "../../../src/components/Navbar/Navbar";
 import Sidebar from "../../../src/components/Sidebar/Sidebar";
-import Card from "../../../src/components/Card/Card";
 import Punch from "./Punch/Punch";
 import Slider from "./Slider/Slider";
 import Feature from "./Feature/Feature";
-import ThreeDCanvas from "./Punch/Trophy/Trophy";
+import CardPF from "./CardPF/CardPF";
 
 //主页面，也是未登录的代办操作页面
 function Home() {
@@ -47,9 +47,8 @@ function Home() {
             <Slider />
             <Punch />
           </div>
-
           <div className="section">
-            <Card />
+            <CardPF />
           </div>
           <div className="section">
             <Footer />

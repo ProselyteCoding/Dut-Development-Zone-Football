@@ -18,9 +18,8 @@ const Login = () => {
 
   //错误信息
   const [error, setError] = useState(null);
-
+  
   const navigate = useNavigate();
-
   const { login } = useContext(AuthContext);
 
   //设置用户信息
