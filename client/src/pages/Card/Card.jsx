@@ -7,12 +7,10 @@ import CardBar from "./CardBar/CardBar.jsx";
 const Card = () => {
   return (
     <div>
-      <div className="App">
+      <div className="card">
         <Navbar />
         <Sidebar />
-        <div className="container">
-          <CardBar />
-        </div> 
+        <CardBar />
         <Footer />
       </div>
     </div>

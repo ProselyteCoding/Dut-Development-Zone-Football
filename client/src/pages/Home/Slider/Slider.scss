@@ -49,25 +49,29 @@
   }
   .slider-list {
     width: 1380px;
-    height: 600px;
+    height: 253.125px;
     position: relative;
     overflow: hidden;
     display: flex;
     gap: 15px;
     align-items: center;
     flex-direction: row;
+
     .slider-item {
+      display: flex;
       width: 450px;
-      height: 253.125px;
+      height: 100%;
       min-width: 450px;
       object-fit: cover;
       transition: all 0.2s ease-in-out;
       opacity: 0.7;
-      
+      flex-grow: 0;
+      flex-shrink: 0;
     }
+
     .slider-item:hover {
       cursor: pointer;
-      scale: 1.05;
+      transform: scale(1.05);
     }
   }
 }

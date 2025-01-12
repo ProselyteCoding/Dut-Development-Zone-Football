@@ -1,0 +1,67 @@
+.cardpf-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #1a214a;
+  width: 1250px;
+  height: 400px;
+  position: relative;
+  left: 300px;
+  top: 230px;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 400px;
+
+    .text {
+      font-size: 50px;
+      color: white;
+    }
+    button {
+      width: 100px;
+      height: 40px;
+      font-size: 20px;
+      cursor: pointer;
+      margin-top: 30px;
+    }
+  }
+  .slider {
+    width: 200px;
+    height: 250px;
+    position: absolute;
+    right: 300px;
+    top: 0px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 20s linear infinite;
+
+    .item {
+        position: absolute;
+        width: 200px;
+        height: 330px;
+        inset: 0 0 0 0;
+        transform: 
+            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(320px);
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+@keyframes autoRun{
+    from{
+        transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+    }to{
+        transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+    }
+}
