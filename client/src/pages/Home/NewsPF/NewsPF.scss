@@ -1,0 +1,141 @@
+.newspf-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1150px;
+    height: 560px;
+    border-radius: 10px;
+    background: #1a214a;
+    position: relative;
+    top: 180px;
+    left: 350px;
+
+    .news-card-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 1050px;
+        height: 400px;
+        position: relative;
+        top: 30px;
+
+        .news-card-item {
+            width: 300px;
+            height: 400px;
+            border-radius: 7px;
+            background: #2c346c;
+            position: absolute;
+            transform-style: preserve-3d;
+            transition: all 0.5s ease-in-out;
+
+            .news-card-f {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                backface-visibility: hidden;
+                border-radius: 7px;
+                overflow: hidden;
+                
+                img {
+                    object-fit: cover;
+                    opacity: 0.8;
+                    position: absolute;
+                    z-index: 1;
+                    height: 100%;
+                    width: 100%;
+                    border: none;
+                }
+                .img-blur {
+                    width: 100%;
+                    height: 70px;
+                    position: absolute;
+                    bottom: 0;
+                    background: #beb7b7b4;
+                    z-index: 2;
+                }
+                .content-f {
+                    font-size: 25px;
+                    color: white;
+                    width: 100%;
+                    height: 100px;
+                    // border: 1px solid white;
+                    position: absolute;
+                    bottom: 0;
+                    z-index: 3;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+            .news-card-b {
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                transform: rotateY(180deg);
+                backface-visibility: hidden;
+
+                .content-b {
+                    .content-b-title {
+                        position: relative;
+                        top: 25px;
+                        width: 100%;
+                        height: 70px;
+                        display: flex;
+                        justify-content: center;
+                        font-size: 35px;
+                        color: white;
+                    }
+                    .content-b-text {
+                        position: relative;
+                        top: 5px;
+                        width: 100%;
+                        height: 50px;
+                        display: flex;
+                        justify-content: center;
+                        font-size: 25px;
+                        color: white;
+                    }
+                }
+            }
+        }
+        .news-card-item:nth-child(2) {
+            left: 375px;
+        }
+        .news-card-item:nth-child(3) {
+            right: 0px;
+        }
+        .news-card-item:hover {
+            cursor: pointer;
+            transform: rotateY(180deg);
+        }
+    }
+    .news-content-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 500px;
+        height: 130px;
+        position: relative;
+        top: 27px;
+
+        .content-text {
+            display: flex;
+            justify-content: center;
+            width: 400px;
+            height: 60px;
+            font-size: 30px;
+            color: white;
+            position: relative;
+            left: -25px;
+        }
+        .content-btn {
+            width: 100px;
+            height: 40px;
+            font-size: 20px;
+            position: relative;
+            top: -6px;
+            left: -60px;
+        }
+    }
+}

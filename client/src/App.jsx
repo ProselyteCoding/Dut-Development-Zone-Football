@@ -5,6 +5,7 @@ import Register from "./pages/Register/Register.jsx";
 import Login from "./pages/Login/Login.jsx";
 import Team from "./pages/Team/Team.jsx";
 import Card from "./pages/Card/Card.jsx";
+import News from "./pages/News/News.jsx";
 
 const router = createBrowserRouter([
   {
@@ -54,8 +55,15 @@ const router = createBrowserRouter([
         <Card />
       </div>
     ),
+  },
+  {
+    path: "/news",
+    element: (
+      <div>
+        <News />
+      </div>
+    ),
   }
-
 ]);
 
 const App = () => {

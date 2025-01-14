@@ -10,16 +10,30 @@ const Feature = () => {
 
   return (
     <div className="feature-container">
-      <div className="feature-image-container">
+      <div className="feature-screen-container">
+        {/* <div className="feature-top">
+          <img src={123} alt="icon"></img>
+          <img src={123} alt="icon"></img>
+          <img src={123} alt="icon"></img>
+        </div>
+        <div className="feature-content">
+          <div className="feature-title"></div>
+          <div className="feature-description"></div>
+        </div> */}
         <div className="feature-decorator-left"></div>
         <div className="feature-decorator-right"></div>
         <img src={feature} alt="feature" />
+        {/* <div className="feature-bottom">
+          <button className="prev"></button>
+          <button className="play"></button>
+          <button className="next"></button>
+        </div> */}
       </div>
-      <div className="feature-dots-container">
+      {/* <div className="feature-dots-container">
         <button className="feature-btn-dot"></button>
         <button className="feature-btn-dot"></button>
         <button className="feature-btn-dot"></button>
-      </div>
+      </div> */}
       <Bullet />
       <Typewriter />
       {/* <div className="feature-bottom">

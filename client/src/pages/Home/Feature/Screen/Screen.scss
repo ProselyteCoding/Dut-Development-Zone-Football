@@ -1,0 +1,40 @@
+.feature-screen-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: $img-height;
+  width: $container-width;
+  overflow: hidden;
+  background: #ff40002f;
+  .feature-decorator-left {
+    position: absolute;
+    left: 0;
+    top: 180px;
+    z-index: 2;
+    background-color: rgba(6, 172, 172, 0.877);
+    width: 25px;
+    height: 250px;
+  }
+  .feature-decorator-right {
+    position: absolute;
+    right: 0;
+    top: 120px;
+    z-index: 2;
+    background-color: rgba(99, 1, 121, 0.831);
+    width: 25px;
+    height: 180px;
+  }
+  img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: $img-height;
+    width: $container-width;
+    object-fit: cover;
+    opacity: 0.2;
+    z-index: 1;
+  }
+}
