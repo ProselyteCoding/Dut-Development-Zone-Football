@@ -2,7 +2,7 @@
 
 # Dut Development Zone Football 大工开发区足球
 
-约球、打卡、战术、新闻、论坛、球星卡DIY...用爱发电，尝试仿照其他大俱乐部官网做一个网站，磨练自己web技术的同时希望能为平时的足球生活带来一些趣味和便利
+约球、打卡、战术、新闻、论坛、球星卡DIY...用爱发电，尝试仿照其他大俱乐部官网做一个网站，磨练自己web技术的同时希望能为平时的足球生活带来一些趣味和便利。
 
 <!-- PROJECT SHIELDS -->
 
@@ -23,7 +23,7 @@
 
   <h3 align="center">Dut Development Zone Football 大工开发区足球</h3>
   <p align="center">
-    约球、打卡、战术、新闻、论坛、球星卡DIY...用爱发电，尝试仿照其他大俱乐部官网做一个网站，磨练自己web技术的同时希望能为平时的足球生活带来一些趣味和便利
+    约球、打卡、战术、新闻、论坛、球星卡DIY...用爱发电，尝试仿照其他大俱乐部官网做一个网站，磨练自己web技术的同时希望能为平时的足球生活带来一些趣味和便利。
     <br />
     <a href="https://github.com/ProselyteCoding/Dut-Development-Zone-Football"><strong>探索本项目的文档 »</strong></a>
     <br />
@@ -54,16 +54,17 @@
 - [鸣谢](#鸣谢)
 
 ##### 当前进展
-1. 页面设计: Navbar、Sidebar、Footer进行了初步样式设计，暂无api。
-2. authentication: 使用了之前todolist项目的代码，还未检验。
+1. 页面设计: Navbar、Sidebar、Footer进行了初步设计，样式有待打磨。
+2. authentication: 使用了之前todolist项目的代码，还未适配。
 3. DIY球星卡: 对于默认图片实现了可拖拽和变形功能，实现了导出图片功能，右侧控制部分设计已完成还差逻辑实现以及与左侧的关联以及和服务器连接。是Card页面的主要组件。
-4. 顶部Feature大图片和Slider轮换图设计已完成，图片切换功能正在制作。增加了弹幕和打字机特效，弹幕特效目前在适配中。计划将整体做成类似B站的视频播放器窗口
-5. 打卡部分，刚完成布局框架。引入3d模型世界杯，效果不错。排行榜和打卡图还未开始。打卡信息等待完善。
+4. 顶部Feature大图片和Slider轮换图设计已完成，图片切换功能已完成，后续添加切换动画。增加了弹幕和打字机特效。计划将整体做成类似B站的视频播放器窗口。
+5. 打卡部分，刚完成布局框架。引入3d模型世界杯。排行榜和打卡图还未开始。打卡信息等待完善。
 6. Footer初步设计，细节有待增多完善。
-7. 重构Card部分为CardPF，提供一个跳转链接，将因空间所限无法完整显示的部分改为新的Card页。
+7. 重构Card部分为CardPF，主体为旋转卡片列表。提供一个跳转链接，将因空间所限无法完整显示的部分改为新的Card页。
 8. 将Home页分为不同模块，黏性滑轮。
+9. 在Home页做了NewsPF部分，作为新闻预览，主体为双面翻页卡。
 其他：将CSS替换为SASS（.scss），进一步完善了项目框架。
-plus.临近期末，更新进度暂缓
+plus.参加大创及其他比赛，更新进度暂缓
 
 ###### 开发前的配置要求
 
@@ -85,8 +86,8 @@ git clone https://github.com/shaojintian/Best_README_template.git
 
 ### 技术栈
 
-前端：
-后端：
+前端：React框架、sass预处理css，之后将使用typescript、jsx代码将逐步改为tsx 
+后端：node.js、express框架
 数据库管理：MySQL
 
 ### 部署
@@ -96,18 +97,18 @@ git clone https://github.com/shaojintian/Best_README_template.git
 
 ### 使用到的框架
 
-- [xxxxxxx](https://getbootstrap.com)
-- [xxxxxxx](https://jquery.com)
-- [xxxxxxx](https://laravel.com)
+- [React](https://react.com)
+- [Express](https://express.com)
+- [Sass](https://sass.com)
 
 ### 贡献者
 
-请阅读**CONTRIBUTING.md** 查阅为该项目做出贡献的开发者。
+请阅读**CONTRIBUTING.md** 查阅为该项目做出贡献的开发者。（暂未编写）
 
 #### 如何参与开源项目
 
 贡献使开源社区成为一个学习、激励和创造的绝佳场所。你所作的任何贡献都是**非常感谢**的。
-
+（暂未编写）
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
