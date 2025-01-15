@@ -94,6 +94,7 @@ git clone https://github.com/shaojintian/Best_README_template.git
 
 目前使用github-pages工具部署，部署路径：[https://proselytecoding.github.io/Dut-Development-Zone-Football/](https://proselytecoding.github.io/Dut-Development-Zone-Football/)。
 后续将购置专用域名及服务器。
+plus.当前github-pages部署的静态网站版本可能落后于最新的代码版本，如有查看最新版本的需要请询问并督促“懒惰”的作者及时更新。
 
 ### 使用到的框架
 
