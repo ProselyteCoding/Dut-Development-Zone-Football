@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/Dut-Development-Zone-Football/static/css/main.7d05e5e7.css",
+    "main.js": "/Dut-Development-Zone-Football/static/js/main.16ae7c67.js",
+    "static/media/feature.jpg": "/Dut-Development-Zone-Football/static/media/feature.7dc40146e44b87582772.jpg",
+    "static/media/slider3.jpg": "/Dut-Development-Zone-Football/static/media/slider3.ac5eb75d90fabdec24a9.jpg",
+    "static/media/slider8.jpg": "/Dut-Development-Zone-Football/static/media/slider8.7a12565e018eb459d9f6.jpg",
+    "static/media/slider4.jpg": "/Dut-Development-Zone-Football/static/media/slider4.4e89824c8ac9a47b377d.jpg",
+    "static/media/slider6.jpg": "/Dut-Development-Zone-Football/static/media/slider6.3a0384d83dd893473c24.jpg",
+    "static/media/slider9.jpg": "/Dut-Development-Zone-Football/static/media/slider9.7aa01e3b4b1c55bdb78c.jpg",
+    "static/media/slider5.jpg": "/Dut-Development-Zone-Football/static/media/slider5.22063501bf2630fd9935.jpg",
+    "static/media/slider7.jpg": "/Dut-Development-Zone-Football/static/media/slider7.d4879d045f3df0f55479.jpg",
+    "static/media/news2.jpg": "/Dut-Development-Zone-Football/static/media/news2.5daad547be11b14c0de9.jpg",
+    "static/media/news3.jpg": "/Dut-Development-Zone-Football/static/media/news3.ab69a665df5e24f5dfcd.jpg",
+    "static/media/slider1.jpg": "/Dut-Development-Zone-Football/static/media/slider1.a6ecf5fcebc1ee390df3.jpg",
+    "static/media/slider2.jpg": "/Dut-Development-Zone-Football/static/media/slider2.eec302ef53833aa2e631.jpg",
+    "static/media/news1.jpg": "/Dut-Development-Zone-Football/static/media/news1.e9ff4515946d23e56881.jpg",
+    "static/media/face.png": "/Dut-Development-Zone-Football/static/media/face.082efc0421f225aa382b.png",
+    "static/media/banner1.png": "/Dut-Development-Zone-Football/static/media/banner1.865fa198239eca0d83b3.png",
+    "static/media/banner2.png": "/Dut-Development-Zone-Football/static/media/banner2.865fa198239eca0d83b3.png",
+    "static/media/banner3.png": "/Dut-Development-Zone-Football/static/media/banner3.865fa198239eca0d83b3.png",
+    "static/media/banner4.png": "/Dut-Development-Zone-Football/static/media/banner4.865fa198239eca0d83b3.png",
+    "static/media/banner5.png": "/Dut-Development-Zone-Football/static/media/banner5.865fa198239eca0d83b3.png",
+    "static/media/banner6.png": "/Dut-Development-Zone-Football/static/media/banner6.865fa198239eca0d83b3.png",
+    "static/media/banner7.png": "/Dut-Development-Zone-Football/static/media/banner7.865fa198239eca0d83b3.png",
+    "static/media/banner8.png": "/Dut-Development-Zone-Football/static/media/banner8.865fa198239eca0d83b3.png",
+    "static/media/fifa23.png": "/Dut-Development-Zone-Football/static/media/fifa23.865fa198239eca0d83b3.png",
+    "static/media/head.jpg": "/Dut-Development-Zone-Football/static/media/head.2dcde2a08e7be62493fb.jpg",
+    "index.html": "/Dut-Development-Zone-Football/index.html",
+    "main.7d05e5e7.css.map": "/Dut-Development-Zone-Football/static/css/main.7d05e5e7.css.map",
+    "main.16ae7c67.js.map": "/Dut-Development-Zone-Football/static/js/main.16ae7c67.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7d05e5e7.css",
+    "static/js/main.16ae7c67.js"
+  ]
+}
